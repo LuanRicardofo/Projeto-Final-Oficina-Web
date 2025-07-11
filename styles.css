@@ -1,0 +1,288 @@
+/* Formatação do site no celular */
+@media (max-width: 1200px) {
+  /* Barra de navegação do site */
+  .nav{
+  flex-direction:column;
+  }
+
+  /* Corpo do site */
+  body {
+  font-size: 25px;
+	margin: 10px 10px 10px 10px;}
+  img {max-width: 100%}
+
+  /* Linhas dos divs */
+  .row, .row2, .row3 {
+  flex-direction: column;
+  height: auto;
+  gap: 10px;
+  }
+
+  /* Colunas dos divs */
+  .column {
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .column img {
+  opacity: 1; 
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+  }
+
+  /* Imagens expandidas */
+  #expandedImg {
+  width: 90vw;
+  max-width: 100%;
+  }
+
+  /* Texto expandido */
+  #imgtext {
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  overflow: auto;
+  }
+  
+  /* Div classe box2 */
+  .box {
+  display: flex-wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  }
+
+  /* Div classe linha2 */
+  .row2 {
+  flex-direction: column;
+  align-items: center;
+  }
+
+  /* Div classe box2 */
+  .box2 {
+  width: 100%;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  }
+
+  /* Div classe box2 e iframes com vídeos*/
+  .box2 iframe {
+  width: 90vw;
+  max-width: 100%;
+  height: 200px;
+  }
+}
+
+/* Barra de navegação do site */
+:root {
+--cor-primaria:#1e3264;
+}
+
+.nav{
+display: flex;
+gap:20px;
+background:var(--cor-primaria);
+padding:10px;
+}
+
+.nav a{
+color: white;
+text-decoration:none;
+}
+
+.nav a.active{
+font-weight:bold;
+border-bottom:2px solid white;
+}
+
+/* Título da página na barra de navegação */
+#titulo, #subtitulo 	{
+  font-family: Arial;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Corpo */
+body {
+	font-family: Arial;
+	background-color: steelblue;
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+	img {max-width: 100%}
+}
+
+/* Parágrafos */
+p.n1 {
+	font-family: Arial;
+  color: white;
+  font-size: 12px;
+}
+
+p.n2 {
+	font-family: Arial;
+  color: white;
+  font-size: 10px
+}
+
+h4 	{
+  font-family: Arial;
+  color: white;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+h4.missao 	{
+  font-size: small;
+  font-family: Arial;
+  color: white;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: justify;
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* 4 colunas iguais que ficam uma ao lado da outra */
+
+.column {
+  float: left;
+  width: 100px;
+  height: 100px;
+  
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  margin: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Coloca as imagens dentro da grade */
+.column img {
+  opacity: 1; 
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+#img7 {
+  width:540px;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#expandedImg {
+width: 90vw !important;
+max-width: 30%;
+}
+
+/* Expande o texto da imagem */
+#imgtext {
+  max-height: 100px;
+  position: sticky;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 15px;
+  text-align: justify;
+  background-color: black;
+  opacity: 0.8;
+  margin: 20px;
+  overflow-y: scroll;
+}
+
+/* Container das imagens expandidas */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Mostra quando ativo */
+.container.active {
+  display: block;
+}
+
+.row {
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding:10px;
+  margin-bottom: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Galeria com rolagem */
+div.scrollgallery {
+  background-color: royalblue;
+  overflow: auto;
+  white-space: normal;
+}
+
+/* Legenda da foto na página "Missão" */
+figcaption {
+  color: white;
+  margin-top: 10px;
+  font-size: small;
+}
+
+/* Mostra um bloco com quote */
+blockquote {
+  border-left-width: .25rem;
+  border-left: 5px solid #323944;
+  font-size: 17.5px;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+}
